@@ -1,0 +1,71 @@
+.our-teachers .teacher-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.teacher-item {
+  text-align: center;
+}
+
+.teacher-image {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 16px;
+}
+
+.teacher-name {
+  margin-bottom: 8px;
+
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.teacher-description {
+  margin: 0;
+
+  color: var(--gray-text);
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+@media screen and (min-width: 768px) {
+  .our-teachers .teacher-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+    column-gap: 32px;
+    row-gap: 48px;
+  }
+
+  .teacher-item {
+    max-width: none;
+  }
+
+  .teacher-description {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .our-teachers .teacher-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 32px;
+    row-gap: 0;
+  }
+
+  .teacher-item {
+    max-width: 272px;
+  }
+}
